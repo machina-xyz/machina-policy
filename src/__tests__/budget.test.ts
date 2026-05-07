@@ -53,11 +53,10 @@ describe("BudgetTracker", () => {
     tracker.spend(80);
     expect(tracker.getStatus().spentUsd).toBe(80);
 
-    // Simulate period elapsing by manipulating the internal state via reset
-    // For a more realistic test, we backdate the periodStart
-    const status = tracker.getStatus();
-    // Access internal budget by using setLimit + reset to simulate
-    // Actually, let's use a real approach: create tracker with a past period start
+    // Simulate period elapsing by manipulating the internal state via reset.
+    // First sanity-check that the existing tracker is in the expected state,
+    // then build a second tracker we can backdate.
+    expect(tracker.getStatus().spentUsd).toBe(80);
     const oldTracker = new BudgetTracker({
       agentId: "agent-001",
       limitUsd: 100,
