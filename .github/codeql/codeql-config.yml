@@ -1,0 +1,5 @@
+name: "MACHINA CodeQL config"
+
+paths-ignore:
+  - "dist/**"
+  - "node_modules/**"
