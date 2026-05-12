@@ -74,13 +74,13 @@
   "homepage": "https://machina.money",
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "hono": "^4.0.0",
-    "typescript": "^5.7.0",
-    "vitest": "^3.2.4"
+    "hono": "^4.12.18",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6"
   },
   "peerDependencies": {
     "express": "^4.0.0 || ^5.0.0",
-    "hono": "^4.0.0"
+    "hono": "^4.12.18"
   },
   "peerDependenciesMeta": {
     "express": {
